@@ -31,7 +31,7 @@ const renderGoodsItem = (title = 'Ожидаем...', price = 'кто знает
         <div class="goods_cart">
             <a href="singlepage.html" class="goods_cart_a">
                 <img src="img/luzifers_korb.png" alt="Корзина" class="goods_cart_right">
-                <p>Add to cart</p>
+                <p class="goods_cart_text">В список желаний</p>
             </a>
         </div>
     </div>`;
