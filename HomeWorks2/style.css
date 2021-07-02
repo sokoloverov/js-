@@ -83,23 +83,46 @@
 .banner {
   height: 180px;
   overflow: hidden;
+  position: relative;
 }
 
 .banner__slider {
   position: relative;
   top: -100px;
+  left: -10px;
+  opacity: 0.8;
   -webkit-animation: kenburns-top-right 8s ease-out both;
           animation: kenburns-top-right 8s ease-out both;
 }
 
+.banner__uponIt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .slider_text {
-  position: relative;
-  top: -425px;
-  left: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: #f3efef;
   text-transform: uppercase;
   font-weight: 700;
-  padding-top: 22px;
+  padding-top: 20px;
+  padding-left: 20px;
 }
 
 .slider_upper_text {
@@ -110,17 +133,22 @@
 .slider_lower_text {
   font-size: 40px;
   letter-spacing: 1px;
-  line-height: 0.8;
+  line-height: 1;
 }
 
 .slider_word {
   color: #f16d7f;
 }
 
+/*КОРЗИНА И КНОПКА ВОЗВРАТА*/
 .cart-button {
-  position: absolute;
-  top: 20px;
-  right: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   color: #dd5656;
   text-transform: uppercase;
   font-weight: 700;
@@ -162,6 +190,18 @@
   z-index: 2;
 }
 
+.button__LavkaBack {
+  margin-top: 10px;
+  padding: 3px 6px 5px;
+  font-family: "Neucha";
+  font-size: medium;
+  text-transform: lowercase;
+  -webkit-box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+  -webkit-animation: color-change-2x 1s linear infinite alternate both;
+          animation: color-change-2x 1s linear infinite alternate both;
+}
+
 /*ВИТРИНА ТОВАРОВ*/
 .good_box_big {
   display: -webkit-box;
@@ -176,6 +216,7 @@
           box-sizing: border-box;
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
+  width: 100%;
 }
 
 .goods_box {

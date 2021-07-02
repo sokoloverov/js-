@@ -15,20 +15,18 @@ class GoodsItem {
     }
     render() {
         return `<div class="goods_box">
-        <a href="#">
-            <figure>
-                <img class="goods_box__img" src="img/${this.picture}" alt="Товар">
-                <figcaption class="goods_box_upper_font">${this.title}</figcaption>
-                <figcaption class="goods_box_lower_font">${this.price}</figcaption>
-            </figure>
-        </a>
-        <div class="goods_cart">
-            <a href="singlepage.html" class="goods_cart_a">
-                <img src="img/luzifers_korb.png" alt="Корзина" class="goods_cart_right">
-                <p class="goods_cart_text">В список желаний</p>
-            </a>
-        </div>
-    </div>`;
+                    <figure>
+                        <img class="goods_box__img" src="img/${this.picture}" alt="Товар">
+                        <figcaption class="goods_box_upper_font">${this.title}</figcaption>
+                        <figcaption class="goods_box_lower_font">${this.price}</figcaption>
+                    </figure>
+                    <div class="goods_cart">
+                        <a href="#" class="goods_cart_a">
+                            <img src="img/luzifers_korb.png" alt="Корзина" class="goods_cart_right">
+                            <p class="goods_cart_text">В список желаний</p>
+                        </a>   
+                    </div>
+                </div>`;
     }
 }
 
