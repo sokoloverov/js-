@@ -219,6 +219,16 @@ $main-width: 1100px;
     padding-left: 17px;
 }
 
+/*Форма данных*/
+.formUsers {
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+.submitButton {
+    background-color: #dd5656;
+}
+
 /*Футтер самый низ*/
 .footer_lower_box {
     background-color: #141313;
