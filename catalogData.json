@@ -5,11 +5,6 @@
     "picture": "happiness.jpg"
    },
   {
-    "title": "Счастье",
-    "price": 150,
-    "picture": "happiness.jpg"
-   },
-  {
     "title": "Любовь",
     "price": 450,
     "picture": "love.jpg"
@@ -40,8 +35,8 @@
     "picture": "frendship.jpg"
    },
   {
-    "title": "eee",
-    "price": 250,
-    "picture": "frendship.jpg"
+    "title": "undefined",
+    "price": ,
+    "picture": ""
    }
  ]
