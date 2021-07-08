@@ -33,8 +33,10 @@
     "title": "Дружба",
     "price": 250,
     "picture": "frendship.jpg"
+   },
+  {
+    "title": "",
+    "price": ,
+    "picture": 
    }
-  {,
-  ,
-  }
  ]
