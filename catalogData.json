@@ -5,6 +5,11 @@
     "picture": "happiness.jpg"
    },
   {
+    "title": "Счастье",
+    "price": 150,
+    "picture": "happiness.jpg"
+   },
+  {
     "title": "Любовь",
     "price": 450,
     "picture": "love.jpg"
