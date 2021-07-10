@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Счастье",
+    "price": 150,
+    "picture": "img/happiness.jpg"
+   },
+  {
+    "title": "Любовь",
+    "price": 450,
+    "picture": "img/love.jpg"
+   },
+  {
+    "title": "Мудрость",
+    "price": 550,
+    "picture": "img/iq.jpeg"
+   },
+  {
+    "title": "Вера",
+    "price": 350,
+    "picture": "img/belivable.jpg"
+   },
+  {
+    "title": "Надежда",
+    "price": 50,
+    "picture": "img/hope.png"
+   },
+  {
+    "title": "Знание JS",
+    "price": 950,
+    "picture": "img/js.jpg"
+   },
+  {
+    "title": "Дружба",
+    "price": 250,
+    "picture": "img/frendship.jpg"
+   },
+  {
+    "title": "Ожидаем...",
+    "price": 0,
+    "picture": "img/waiting.png"
+   }
+ ]
