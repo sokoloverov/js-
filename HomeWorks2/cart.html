@@ -10,70 +10,88 @@
 </head>
 
 <body>
-    <!-- 100% высоты -->
-    <div class="height100">
-        <div class="top">
+    <div id="app">
 
-            <!-- Шапка заголовка -->
-            <div class="pageContainer">
-                <header class="banner">
-                    <img src="img/sky.png" alt="Фоновый слайд" class="banner__slider">
+        <!-- 100% высоты -->
+        <div class="height100">
+            <div class="top">
 
-                    <div class="banner__uponIt">
-                        <div class="slider_text">
-                            <p class="slider_upper_text">Корзина</p>
-                            <p class="slider_lower_text">фауста & <span class="slider_word">люцифера</span></p>
+                <!-- Шапка заголовка -->
+                <div class="pageContainer">
+                    <header class="banner">
+                        <img src="img/sky.png" alt="Фоновый слайд" class="banner__slider">
+
+                        <div class="banner__uponIt">
+                            <div class="slider_text">
+                                <p class="slider_upper_text">Корзина</p>
+                                <p class="slider_lower_text">фауста & <span class="slider_word">люцифера</span></p>
+                            </div>
+                            <!-- Cart-->
+                            <div class="cart-button">
+                                <a href="#" class="header_cart">
+                                    <img src="img/luzifers_korb.png" alt="Корзина" class="cart-button__size">
+                                    <p class="numbers">{{quantityGoods}}</p>
+                                </a>
+                                <form action="index.html">
+                                    <button class="button__LavkaBack">В лавку</button>
+                                </form>
+                            </div>
                         </div>
-                        <!-- Cart-->
-                        <div class="cart-button">
-                            <a href="#" class="header_cart">
-                                <img src="img/luzifers_korb.png" alt="Корзина" class="cart-button__size">
-                                <p class="numbers">0</p>
-                            </a>
-                            <form action="index.html">
-                                <button class="button__LavkaBack">В лавку</button>
-                            </form>
+                    </header>
+
+                    <!-- Товары в корзине -->
+                    <main>
+                        <p v-if="quantityGoods == 0">В корзине товаров нет!</p>
+                        <div class="itemCartContainer">
+
+                            <div class="good_box_big itemCartContainer_border" v-for="item in layInCart">
+                                <img class="itemCartContainer__img" :src="item.picture" alt="Товар">
+                                <div class="goods_box_upper_font center">{{item.title}}
+                                </div>
+                                <div class="goods_box_lower_font center">{{item.price}}
+                                </div>
+                                <div class="goods_box_lower_font center">{{item.quantityItems}}
+                                </div>
+                                <div class="goods_box_lower_font center">{{item.priceItemSummary}}
+                                </div>
+                            </div>
+
                         </div>
-                    </div>
-                </header>
+                    </main>
 
-                <!-- Товары в корзине -->
-                <main>
-                    <div class=""></div>
-                </main>
-
-                <!-- Форма для заполнения -->
-                <form action="" method="get">
+                    <!-- Форма для заполнения -->
                     <fieldset class="formUsers">
                         <legend>Пришло время записаться в список страждущих:</legend>
                         <label>Имя от рождения (своего, не Его)
-                            <input type="text" name="userName" id="nameUser">
+                            <input type="text" v-on:keyup="userName" :class="colorSubmitError">
                         </label>
-                        <label for="">Номер внешней шишки уха (телефон по старому)
-                            <input type="text" name="" id="phoneUser">
+                        <label for="">Номер отъемлемой части тела (телефон по старому)
+                            <input type="text" v-on:keyup="userPhone" :class="colorSubmitError">
                         </label>
                         <label for="">Имя почты в Паутине
-                            <input type="email" name="" id="mailUser">
+                            <input type="email" v-on:keyup="userMail" :class="colorSubmitError">
                         </label>
                         <label for="lastWord">Ваше последнее слово</label>
                         <textarea name="" id="lastWord" rows="3"></textarea>
-                        <input type="submit" value="Продаю душу" id="submit">
+                        <button @click="userSubmit">Продаю душу</button>
                     </fieldset>
-                </form>
+
+                </div>
 
             </div>
 
+            <!-- Футтер -->
+            <footer>
+                <div class="footer_lower_box pageContainer footer_lower_container">
+                    <p class="copyright">&copy; Fausts und Luzifers Laden 2021 All Rights Reserved.</p>
+                </div>
+            </footer>
         </div>
 
-        <!-- Футтер -->
-        <footer>
-            <div class="footer_lower_box pageContainer footer_lower_container">
-                <p class="copyright">&copy; Fausts und Luzifers Laden 2021 All Rights Reserved.</p>
-            </div>
-        </footer>
     </div>
 
-    <script src="scriptcart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="script5.js"></script>
 
 </body>
 

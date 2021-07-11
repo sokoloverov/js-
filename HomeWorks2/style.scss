@@ -219,6 +219,30 @@ $main-width: 1100px;
     padding-left: 17px;
 }
 
+/*Витрина корзины*/
+.itemCartContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0, 130px;
+    border: 2px, solid, rgb(20, 20, 19);
+}
+.itemCartContainer_border {
+    margin: 0, 25px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+}
+.itemCartContainer_border:hover {
+    animation: color-change-2x 1s linear infinite alternate both;
+}
+.itemCartContainer__img {
+    //height: 140px;
+    width: 130px;
+}
+.center {
+    display: flex;
+    align-items: center;
+}
+
 /*Форма данных*/
 .formUsers {
     display: flex;
@@ -226,7 +250,7 @@ $main-width: 1100px;
     border: none;
 }
 .submitButton {
-    background-color: #dd5656;
+    background-color: #e9cfcf;
 }
 
 /*Футтер самый низ*/

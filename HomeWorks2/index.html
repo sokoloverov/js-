@@ -10,46 +10,71 @@
 </head>
 
 <body>
-    <!-- 100% высоты -->
-    <div class="height100">
-        <div class="top">
-            <!-- Шапка заголовка -->
-            <div class="pageContainer">
-                <header class="banner">
-                    <img src="img/sky.png" alt="Фоновый слайд" class="banner__slider">
+    <div id="app">
 
-                    <div class="banner__uponIt">
-                        <div class="slider_text">
-                            <p class="slider_upper_text">Лавка</p>
-                            <p class="slider_lower_text">фауста & <span class="slider_word">люцифера</span></p>
+        <!-- 100% высоты -->
+        <div class="height100">
+            <div class="top">
+
+                <!-- Шапка заголовка -->
+                <div class="pageContainer">
+                    <header class="banner">
+                        <img src="img/sky.png" alt="Фоновый слайд" class="banner__slider">
+                        <div class="banner__uponIt">
+                            <div class="slider_text">
+                                <p class="slider_upper_text">Лавка</p>
+                                <p class="slider_lower_text">фауста & <span class="slider_word">люцифера</span></p>
+                            </div>
+                            <!-- Cart-->
+                            <div class="cart-button">
+                                <a href="cart.html" class="header_cart">
+                                    <img src="img/luzifers_korb.png" alt="Корзина" class="cart-button__size">
+                                    <p class="numbers">{{quantityGoods}}</p>
+                                </a>
+                                <!-- <button class="cart-button" type="button">Корзина</button> -->
+                            </div>
                         </div>
-                        <!-- Cart-->
-                        <div class="cart-button">
-                            <a href="cart.html" class="header_cart">
-                                <img src="img/luzifers_korb.png" alt="Корзина" class="cart-button__size">
-                                <p class="numbers">0</p>
-                            </a>
-                            <!-- <button class="cart-button" type="button">Корзина</button> -->
+                    </header>
+                    <input type="text" class="goods-search" v-on:keyup="searchPhraseHandler" />
+                    <button class="search-button" type="button" @click="renderSearchPhrase">Искать</button>
+
+                    <!-- @click="addToCart($event.currentTarget.id)" -->
+
+                    <main>
+                        <div class="goods-list good_box_big">
+
+                            <div class="goods_box" v-for="item in localDataGoods">
+                                <figure>
+                                    <img class="goods_box__img" :src="item.picture" alt="Товар">
+                                    <figcaption class="goods_box_upper_font">{{item.title}}</figcaption>
+                                    <figcaption class="goods_box_lower_font">{{item.price}}</figcaption>
+                                </figure>
+                                <div class="goods_cart">
+                                    <a href="#" class="goods_cart_a" :id="item.title" @click="addToCart(item)">
+                                        <img src="img/luzifers_korb.png" alt="Корзина" class="goods_cart_right">
+                                        <p class="goods_cart_text">В список желаний</p>
+                                    </a>
+                                </div>
+                            </div>
+
+
                         </div>
-                    </div>
-
-                </header>
-
-                <main>
-                    <div class="goods-list good_box_big"></div>
-                </main>
+                    </main>
+                </div>
             </div>
+
+            <!-- Футтер -->
+            <footer>
+                <div class="footer_lower_box pageContainer footer_lower_container">
+                    <p class="copyright">&copy; Fausts und Luzifers Laden 2021 All Rights Reserved.</p>
+                </div>
+            </footer>
         </div>
 
-        <!-- Футтер -->
-        <footer>
-            <div class="footer_lower_box pageContainer footer_lower_container">
-                <p class="copyright">&copy; Fausts und Luzifers Laden 2021 All Rights Reserved.</p>
-            </div>
-        </footer>
     </div>
 
-    <script src="script3.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="script5.js"></script>
 
 </body>
 
